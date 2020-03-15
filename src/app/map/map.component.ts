@@ -43,8 +43,4 @@ export class MapComponent implements OnInit {
 
     this.tiles.on('load', () => this.map.invalidateSize());
   }
-
-  test() {
-    this.map.flyTo([10, 10], 8);
-  }
 }

@@ -9,7 +9,7 @@ export class SnackBarService {
 
   constructor() { }
 
-  show(message: string, color: string = 'primary', duration: number = 2000000) {
+  show(message: string, color: string = 'primary', duration: number = 2000) {
     this.snackBarData.next({
       message,
       color,

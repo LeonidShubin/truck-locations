@@ -23,7 +23,7 @@ export class TrucksDataService {
         map((res: any[]) => {
           return res.map((item, i) => {
             if (!item.id) {
-              item.id = i;
+              item.id = Date.now() + i;
             }
             return item as ITruck;
           });
@@ -45,9 +45,7 @@ export class TrucksDataService {
   }
 
   removeItem(id) {
-    this.truckList = this.truckList.filter(item => {
-      return item.id !== id;
-    });
+    this.truckList = this.truckList.filter(item => item.id !== id );
     this.trucksToView.next(this.truckList);
   }
 }

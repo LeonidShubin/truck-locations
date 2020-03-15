@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {TrucksDataService} from '../shared/services/trucks-data.service';
 import {ITruck} from '../shared/interfaces/truck';
 import {NgbModal, NgbModalConfig} from '@ng-bootstrap/ng-bootstrap';
@@ -37,6 +37,7 @@ export class TruckListComponent implements OnInit {
   }
 
   setCurrentAsset(event, asset) {
+    console.log(asset);
     this.currentTruck = asset;
     this.mapService.moveTo(asset.lat, asset.lon);
   }

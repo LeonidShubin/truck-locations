@@ -38,7 +38,7 @@ export class AddTruckComponent implements OnInit {
 
   addAsset() {
     this.truckData.addItem({
-      id: this.truckData.truckList.length + 1,
+      id: Date.now(),
       name: this.addAssetForm.controls.name.value,
       lat: this.addAssetForm.controls.latitude.value,
       lon: this.addAssetForm.controls.longitude.value,

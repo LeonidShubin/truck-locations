@@ -1,18 +1,20 @@
-<div class="list-group">
-  <div
-    *ngFor="let truck of trucksToView"
-    class="list-group-item list-group-item-action"
-    [class.active]="currentTruck.id === truck.id"
-    (click)="setCurrentAsset($event, truck)"
-  >
-    <div>{{truck.name}}</div>
-    <button
-      type="button"
-      class="close text-danger"
-      (click)="openModal(content)"
+<div class="wrapper mt-3">
+  <div class="list-group">
+    <div
+      *ngFor="let truck of trucksToView"
+      class="list-group-item list-group-item-action"
+      [class.active]="currentTruck.id === truck.id"
+      (click)="setCurrentAsset($event, truck)"
     >
-      <span aria-hidden="true">&times;</span>
-    </button>
+      <div>{{truck.name}}</div>
+      <button
+        type="button"
+        class="close text-danger"
+        (click)="openModal(content)"
+      >
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
   </div>
 </div>
 

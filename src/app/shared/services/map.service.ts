@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import * as L from 'leaflet';
 import {ITruck} from '../interfaces/truck';
 import {Marker} from 'leaflet';
@@ -10,9 +10,10 @@ export class MapService {
   map;
   markers: Marker[] = [];
 
-  constructor() { }
+  constructor() {
+  }
 
-  moveTo( lat, lon ) {
+  moveTo(lat, lon) {
     this.map.flyTo([lat, lon], 8);
   }
 

@@ -1,6 +1,6 @@
-.list-group {
-  height: 100%;
-  overflow-y: scroll;
+.wrapper{
+  max-height: 650px;
+  overflow: auto;
 }
 
 .list-group-item {
