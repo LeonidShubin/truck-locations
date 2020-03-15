@@ -17,10 +17,6 @@ export class MapService {
     this.map.flyTo([lat, lon], 8);
   }
 
-  createMarker(lat, lon, title) {
-    L.marker([lat, lon], {title}).addTo(this.map);
-  }
-
   addMarkers(trucks: ITruck[]) {
     trucks.map(item => {
       this.markers.push(L.marker([item.lat, item.lon], {title: item.name}).addTo(this.map));

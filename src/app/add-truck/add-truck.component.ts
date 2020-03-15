@@ -6,8 +6,7 @@ import {SnackBarService} from '../shared/services/snack-bar.service';
 
 @Component({
   selector: 'app-add-truck',
-  templateUrl: './add-truck.component.html',
-  styleUrls: ['./add-truck.component.scss']
+  templateUrl: './add-truck.component.html'
 })
 export class AddTruckComponent implements OnInit {
   addAssetForm: FormGroup;
@@ -58,7 +57,9 @@ export class AddTruckComponent implements OnInit {
       const truckList = this.truckData.truckList;
 
       truckList.map(item => {
-        if (item.name === control.value) { control.setErrors({ isExists: true }); }
+        if (item.name === control.value) {
+          control.setErrors({isExists: true});
+        }
       });
     };
   }

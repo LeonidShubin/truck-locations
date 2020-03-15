@@ -1,8 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import * as L from 'leaflet';
 import {TrucksDataService} from '../shared/services/trucks-data.service';
-import {ITruck} from '../shared/interfaces/truck';
-import {Marker} from 'leaflet';
 import {MapService} from '../shared/services/map.service';
 
 @Component({
