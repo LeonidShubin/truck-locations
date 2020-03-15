@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {map, tap} from 'rxjs/operators';
 import {ITruck} from '../interfaces/truck';
@@ -32,9 +32,9 @@ export class TrucksDataService {
       );
   }
 
-  search( query ) {
+  search(query) {
     const newArr = this.truckList.filter(item => {
-      return item.name.includes( query );
+      return item.name.includes(query);
     });
     this.trucksToView.next(newArr);
   }
@@ -45,7 +45,7 @@ export class TrucksDataService {
   }
 
   removeItem(id) {
-    this.truckList = this.truckList.filter(item => item.id !== id );
+    this.truckList = this.truckList.filter(item => item.id !== id);
     this.trucksToView.next(this.truckList);
   }
 }

@@ -32,6 +32,12 @@
   </div>
   <div class="modal-footer">
     <button type="button" class="btn btn-outline-secondary" (click)="d('close click')">cancel</button>
-    <button type="button" class="btn btn-outline-danger" (click)="c('delete click'); removeItem($event, currentTruck)" ngbAutofocus >delete</button>
+    <button type="button"
+            class="btn btn-outline-danger"
+            (click)="c('delete click');
+            removeItem($event, currentTruck)"
+            ngbAutofocus
+    >delete
+    </button>
   </div>
 </ng-template>

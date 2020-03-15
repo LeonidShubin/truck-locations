@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {Subject} from 'rxjs';
 
 @Injectable({
@@ -7,7 +7,8 @@ import {Subject} from 'rxjs';
 export class SnackBarService {
   snackBarData = new Subject();
 
-  constructor() { }
+  constructor() {
+  }
 
   show(message: string, color: string = 'primary', duration: number = 2000) {
     this.snackBarData.next({

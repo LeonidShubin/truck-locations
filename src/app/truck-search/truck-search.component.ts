@@ -4,8 +4,7 @@ import {BehaviorSubject} from 'rxjs';
 
 @Component({
   selector: 'app-truck-search',
-  templateUrl: './truck-search.component.html',
-  styleUrls: ['./truck-search.component.scss']
+  templateUrl: './truck-search.component.html'
 })
 export class TruckSearchComponent implements OnInit {
   searchQuery = new BehaviorSubject('');
