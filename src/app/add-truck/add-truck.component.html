@@ -1,0 +1,82 @@
+<button type="button" class="btn btn-outline-success" (click)="openModal(content)">Add Asset</button>
+
+<!-- Modal -->
+<ng-template #content let-c="close" let-d="dismiss">
+  <form [formGroup]="addAssetForm" (ngSubmit)="addAsset()">
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Add new asset</h4>
+      <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div class="form-group row">
+        <label for="assetName" class="col-sm-2 col-form-label">Name</label>
+        <div class="col-sm-10">
+          <input
+            type="text"
+            class="form-control"
+            formControlName="name"
+            name="name"
+            id="assetName">
+          <small class="form-text text-danger"
+                 *ngIf="form.name.touched && form.name.hasError('required')"
+          >The field is required</small>
+          <small class="form-text text-danger"
+                 *ngIf="form.name.hasError('isExists')"
+          >name is already exist </small>
+          <small class="form-text text-danger"
+                 *ngIf="form.name.hasError('minLength')"
+          >Name must be longer than 3 characters </small>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="assetName" class="col-sm-2 col-form-label">Latitude</label>
+        <div class="col-sm-10">
+          <input
+            type="number"
+            class="form-control"
+            formControlName="latitude"
+            name="latitude"
+            id="assetLatitude">
+          <small class="form-text text-danger"
+                 *ngIf="form.longitude.touched && form.longitude.hasError('required')"
+          >The field is required</small>
+          <small class="form-text text-danger"
+                 *ngIf="form.latitude.touched && form.latitude.hasError('min') || form.latitude.touched && form.latitude.hasError('max')"
+          >Value should be in the range from -90 to 90 </small>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="assetName" class="col-sm-2 col-form-label">Longitude</label>
+        <div class="col-sm-10">
+          <input
+            type="number"
+            class="form-control"
+            formControlName="longitude"
+            name="longitude"
+            id="assetLongitude">
+          <small class="form-text text-danger"
+                 *ngIf="form.longitude.touched && form.longitude.hasError('required')"
+          >The field is required</small>
+          <small class="form-text text-danger"
+                 *ngIf="form.longitude.touched && form.longitude.hasError('min') || form.longitude.touched && form.longitude.hasError('max')"
+          >Value should be in the range from -180 to 180 </small>
+        </div>
+      </div>
+
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-secondary" (click)="d('close click')">Cancel</button>
+      <button
+        type="submit"
+        class="btn btn-outline-success"
+        ngbAutofocus
+        [disabled]="addAssetForm.invalid"
+      >Add
+      </button>
+    </div>
+  </form>
+</ng-template>

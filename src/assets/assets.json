@@ -1,0 +1,76 @@
+[{
+  "name": "Truck 1001",
+  "longitude": -17,
+  "latitude": 24
+},
+  {
+    "name": "Truck 1231",
+    "longitude": -2,
+    "latitude": -45
+  },
+  {
+    "name": "Truck 1121",
+    "longitude": 152,
+    "latitude": 28
+  },
+  {
+    "name": "Truck 4867",
+    "longitude": 161,
+    "latitude": 77
+  },
+  {
+    "name": "Truck 1223",
+    "longitude": -169,
+    "latitude": 21
+  },
+  {
+    "name": "Truck 5645",
+    "longitude": 66,
+    "latitude": 60
+  },
+  {
+    "name": "Truck 9856",
+    "longitude": 41,
+    "latitude": -64
+  },
+  {
+    "name": "Truck 2337",
+    "longitude": 149,
+    "latitude": 80
+  },
+  {
+    "name": "Truck 8043",
+    "longitude": -73,
+    "latitude": 72
+  },
+  {
+    "name": "Truck 4932",
+    "longitude": 55,
+    "latitude": 14
+  },
+  {
+    "name": "Truck 5656",
+    "longitude": 7,
+    "latitude": 22
+  },
+  {
+    "name": "Truck 1488",
+    "longitude": -140,
+    "latitude": 54
+  },
+  {
+    "name": "Truck 3666",
+    "longitude": 120,
+    "latitude": -31
+  },
+  {
+    "name": "Truck 4887",
+    "longitude": -143,
+    "latitude": 67
+  },
+  {
+    "name": "Truck 1911",
+    "longitude": -104,
+    "latitude": 23
+  }
+]
