@@ -10,6 +10,7 @@ import { AddTruckComponent } from './add-truck/add-truck.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import { SnackBarComponent } from './snack-bar/snack-bar.component';
 import { MapComponent } from './map/map.component';
+import {LeafletModule} from '@asymmetrik/ngx-leaflet';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { MapComponent } from './map/map.component';
     BrowserModule,
     HttpClientModule,
     NgbModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    LeafletModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

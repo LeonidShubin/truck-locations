@@ -3,6 +3,7 @@ import {TrucksDataService} from '../shared/services/trucks-data.service';
 import {ITruck} from '../shared/interfaces/truck';
 import {NgbModal, NgbModalConfig} from '@ng-bootstrap/ng-bootstrap';
 import {SnackBarService} from '../shared/services/snack-bar.service';
+import {MapService} from '../shared/services/map.service';
 
 @Component({
   selector: 'app-truck-list',
@@ -22,7 +23,8 @@ export class TruckListComponent implements OnInit {
     private trucksData: TrucksDataService,
     private config: NgbModalConfig,
     private modalService: NgbModal,
-    private snackBar: SnackBarService
+    private snackBar: SnackBarService,
+    private mapService: MapService
   ) {
     config.backdrop = 'static';
     config.keyboard = false;
@@ -36,6 +38,7 @@ export class TruckListComponent implements OnInit {
 
   setCurrentAsset(event, asset) {
     this.currentTruck = asset;
+    this.mapService.moveTo(asset.lat, asset.lon);
   }
 
   openModal(content) {

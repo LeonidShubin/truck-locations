@@ -1,24 +1,26 @@
-<div class="container">
-  <div class="row">
-    <div class="h1">
-      Assets map
-    </div>
-  </div>
-</div>
-
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-md-8">
-        <app-map></app-map>
-    </div>
-    <div class="col-md-4">
-      <div class="flex-container">
-        <app-truck-search class="truck-search"></app-truck-search>
-        <app-add-truck></app-add-truck>
+<div class="header">
+  <div class="container">
+    <div class="row">
+      <div class="h1">
+        Assets map
       </div>
-      <app-truck-list></app-truck-list>
     </div>
   </div>
 </div>
-
+<div class="body">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-8">
+        <app-map></app-map>
+      </div>
+      <div class="col-md-4">
+        <div class="flex-container">
+          <app-truck-search class="truck-search"></app-truck-search>
+          <app-add-truck></app-add-truck>
+        </div>
+        <app-truck-list></app-truck-list>
+      </div>
+    </div>
+  </div>
+</div>
 <app-snack-bar></app-snack-bar>
