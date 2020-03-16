@@ -37,7 +37,6 @@ export class TruckListComponent implements OnInit {
   }
 
   setCurrentAsset(event, asset) {
-    console.log(asset);
     this.currentTruck = asset;
     this.mapService.moveTo(asset.lat, asset.lon);
   }
